@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Pizzay Di Hatti | سواد محبت دا - Best Cheesy Pizzas, Rolls & Wings in Rawalpindi & Islamabad</title>
+  <meta name="description" content="Order online from Pizzay Di Hatti. Loaded Crown Crust Pizzas, Crispy Chicken Paratha Rolls, Cheesy Shawarmas, Wings, and Pasta in Shamsabad Rawalpindi & Ghori Town Islamabad. 4.8⭐ Rated. Open 5PM - 3AM.">
+  <meta name="keywords" content="Pizzay Di Hatti, Pizza Rawalpindi, Shamsabad Pizza, Crown Crust Pizza, Fast Food Islamabad, Late Night Delivery Rawalpindi, Paratha Roll, Shawarma">
+  
+  <!-- OpenGraph / Social Meta Tags -->
+  <meta property="og:type" content="restaurant.restaurant">
+  <meta property="og:title" content="Pizzay Di Hatti | سواد محبت دا - Best Cheesy Pizzas in Twin Cities">
+  <meta property="og:description" content="Fully loaded cheesy pizzas, crispy burgers, spicy wings & rolls. Order online with 1-click WhatsApp delivery!">
+  <meta property="og:image" content="Images/hero-banner.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="Images/Logo.jpeg">
+  <link rel="apple-touch-icon" href="Images/Logo.jpeg">
+  
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+
+  <!-- Background 3D Ambient Glows -->
+  <div class="ambient-glow glow-top-left"></div>
+  <div class="ambient-glow glow-top-right"></div>
+  <div class="ambient-glow glow-center"></div>
+
+  <!-- Announcement & Live Status Bar -->
+  <div class="top-announcement-bar">
+    <div class="container announcement-content">
+      <div class="store-status-badge" id="live-store-status">
+        <span class="status-dot pulsing"></span>
+        <span class="status-text" id="status-text">Checking timings...</span>
+      </div>
+      <div class="announcement-msg">
+        <i class="fa-solid fa-motorcycle"></i> <strong>FREE Home Delivery</strong> on all orders above <strong>Rs. 500</strong> in Twin Cities!
+      </div>
+      <div class="announcement-phone">
+        <a href="tel:+923105050481"><i class="fa-solid fa-phone"></i> 0310-5050481</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Glassmorphic Navbar -->
+  <header class="site-header" id="navbar">
+    <div class="container navbar-container">
+      <!-- Brand Logo & Name -->
+      <a href="#" class="brand-identity">
+        <div class="logo-wrapper">
+          <img src="Images/Logo.jpeg" alt="Pizzay Di Hatti Official Logo" class="brand-logo">
+        </div>
+        <div class="brand-titles">
+          <span class="brand-name">Pizzay Di Hatti</span>
+          <span class="brand-tagline">سواد محبت دا</span>
+        </div>
+      </a>
+
+      <!-- Branch Selection Dropdown in Header -->
+      <div class="branch-selector-pill" id="branchSelectorToggle">
+        <i class="fa-solid fa-location-dot location-icon"></i>
+        <div class="branch-info">
+          <span class="branch-label">Delivering To / From:</span>
+          <span class="active-branch" id="activeBranchDisplay">Rawalpindi (Shamsabad)</span>
+        </div>
+        <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+        
+        <!-- Branch Dropdown Menu -->
+        <div class="branch-dropdown-menu" id="branchDropdownMenu">
+          <div class="branch-option active" data-branch="shamsabad" data-phone="923105050481" data-address="Bilal Colony, Shamsabad, Rawalpindi">
+            <div class="branch-icon"><i class="fa-solid fa-shop"></i></div>
+            <div class="branch-details">
+              <strong>Shamsabad Branch (Main)</strong>
+              <small>Bilal Colony, Shamsabad, Rawalpindi</small>
+            </div>
+            <i class="fa-solid fa-check check-icon"></i>
+          </div>
+          <div class="branch-option" data-branch="ghori_town" data-phone="923095229121" data-address="Ghori Town Phase 5, Islamabad">
+            <div class="branch-icon"><i class="fa-solid fa-shop"></i></div>
+            <div class="branch-details">
+              <strong>Islamabad Branch</strong>
+              <small>Ghori Town Phase 5, Islamabad</small>
+            </div>
+            <i class="fa-solid fa-check check-icon"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="#menu-section" class="nav-link active"><i class="fa-solid fa-pizza-slice"></i> Menu</a>
+        <a href="#deals-section" class="nav-link"><i class="fa-solid fa-fire"></i> Mega Deals</a>
+        <a href="#reviews-section" class="nav-link"><i class="fa-solid fa-star"></i> 4.8★ Reviews</a>
+        <a href="#branches-section" class="nav-link"><i class="fa-solid fa-map-location-dot"></i> Branches</a>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="header-actions">
+        <button class="cart-btn" id="openCartBtn" aria-label="Open Shopping Cart">
+          <div class="cart-icon-box">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-badge" id="cartCountBadge">0</span>
+          </div>
+          <span class="cart-btn-text" id="cartBtnTotal">Rs. 0</span>
+        </button>
+
+        <a href="https://wa.me/923105050481?text=Assalam-o-Alaikum%20Pizzay%20Di%20Hatti!%20I%20want%20to%20place%20an%20order." target="_blank" class="whatsapp-direct-btn" rel="noopener" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span class="whatsapp-hover-text">Chat on WhatsApp</span>
+        </a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3D HERO SECTION -->
+  <section class="hero-section" id="home">
+    <div class="container hero-container">
+      
+      <!-- Left Content -->
+      <div class="hero-text-content">
+        <!-- Google Proof Pill -->
+        <div class="rating-proof-pill">
+          <span class="google-badge"><i class="fa-brands fa-google"></i> Verified</span>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <span class="score"><strong>4.8</strong> / 5.0 Rating</span>
+          <span class="reviews-count">(100+ Reviews)</span>
+        </div>
+
+        <h1 class="hero-title">
+          Swad Mohabbat Da <span class="urdu-slogan">سواد محبت دا</span>
+          <span class="gradient-text">Loaded Cheesy Pizzas,</span>
+          Crispy Rolls & Sizzling Wings!
+        </h1>
+
+        <p class="hero-subtitle">
+          Experience Rawalpindi & Islamabad's most loved fast food. Authentic Punjabi love in every bite, overflowing cheese, fresh daily dough, and sizzling late-night delivery until <strong>3:00 AM</strong>.
+        </p>
+
+        <!-- CTAs -->
+        <div class="hero-cta-group">
+          <a href="#menu-section" class="btn btn-primary btn-glow">
+            <i class="fa-solid fa-utensils"></i> Order Online Now
+          </a>
+          <a href="https://wa.me/923105050481" target="_blank" class="btn btn-secondary-whatsapp" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> 1-Click WhatsApp Order
+          </a>
+        </div>
+
+        <!-- 3 Feature Chips -->
+        <div class="hero-features-chips">
+          <div class="feature-chip">
+            <i class="fa-solid fa-bolt"></i>
+            <span>3-Min Fast Dispatch</span>
+          </div>
+          <div class="feature-chip">
+            <i class="fa-solid fa-cheese"></i>
+            <span>100% Pure Mozzarella</span>
+          </div>
+          <div class="feature-chip">
+            <i class="fa-solid fa-moon"></i>
+            <span>Open Till 3:00 AM</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right 3D Visual Card -->
+      <div class="hero-visual-content">
+        <div class="hero-3d-card-wrapper" id="hero3DWrapper">
+          <div class="hero-3d-card" id="hero3DCard">
+            
+            <div class="hero-image-container">
+              <img src="Images/hero-banner.jpg" alt="Pizzay Di Hatti Royal Feast Pizza, Wings and Pasta" class="hero-main-img">
+              <div class="image-gradient-overlay"></div>
+            </div>
+
+            <!-- Floating 3D Highlight Badges -->
+            <div class="floating-badge badge-top-right">
+              <div class="badge-icon"><i class="fa-solid fa-crown"></i></div>
+              <div class="badge-text">
+                <strong>Crown Crust</strong>
+                <small>Stuffed with Chicken & Cheese</small>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-left">
+              <div class="badge-icon"><i class="fa-solid fa-truck-fast"></i></div>
+              <div class="badge-text">
+                <strong>Free Delivery</strong>
+                <small>Orders Rs. 500+</small>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-right">
+              <div class="badge-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+              <div class="badge-text">
+                <strong>Paisa Wasool</strong>
+                <small>Starting from Rs. 200</small>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- QUICK VALUE PROPOSITIONS BAR -->
+  <section class="value-props-bar">
+    <div class="container value-props-grid">
+      <div class="prop-item">
+        <div class="prop-icon"><i class="fa-solid fa-pizza-slice"></i></div>
+        <div class="prop-info">
+          <h4>Freshly Hand-Tossed</h4>
+          <p>Dough prepared daily with 100% pure cheese</p>
+        </div>
+      </div>
+      <div class="prop-item">
+        <div class="prop-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+        <div class="prop-info">
+          <h4>Late Night 5 PM – 3 AM</h4>
+          <p>Midnight cravings sorted in Twin Cities</p>
+        </div>
+      </div>
+      <div class="prop-item">
+        <div class="prop-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <div class="prop-info">
+          <h4>Smart Order & WhatsApp</h4>
+          <p>Instant direct kitchen ticket processing</p>
+        </div>
+      </div>
+      <div class="prop-item">
+        <div class="prop-icon"><i class="fa-solid fa-wallet"></i></div>
+        <div class="prop-info">
+          <h4>Super Pocket Friendly</h4>
+          <p>Deals starting at just Rs. 250 with drinks</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEGA DEALS SECTION (Deals 1 - 6) -->
+  <section class="deals-section" id="deals-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge"><i class="fa-solid fa-fire"></i> Best Value Offers</div>
+        <h2 class="section-title">Special Mega Combo Deals</h2>
+        <p class="section-desc">Save big with our famous value combo platters crafted for individuals, couples, and family feasts!</p>
+      </div>
+
+      <div class="deals-grid" id="dealsGrid">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE MENU SECTION -->
+  <section class="menu-section" id="menu-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge"><i class="fa-solid fa-utensils"></i> Explore Full Menu</div>
+        <h2 class="section-title">Our Delicious Handcrafted Menu</h2>
+        <p class="section-desc">Select your favorite crust, size, and extras. Real-time pricing & 1-click cart customization.</p>
+      </div>
+
+      <!-- Menu Category Tabs Filter -->
+      <div class="menu-filter-container">
+        <div class="category-scroll-wrapper">
+          <button class="category-pill-btn active" data-category="all">
+            <i class="fa-solid fa-border-all"></i> All Items
+          </button>
+          <button class="category-pill-btn" data-category="special_pizzas">
+            <i class="fa-solid fa-crown"></i> Crown & Special Pizzas
+          </button>
+          <button class="category-pill-btn" data-category="pizzas">
+            <i class="fa-solid fa-pizza-slice"></i> Classic Pizzas
+          </button>
+          <button class="category-pill-btn" data-category="deals">
+            <i class="fa-solid fa-fire"></i> Deals (1–6)
+          </button>
+          <button class="category-pill-btn" data-category="shawarma_rolls">
+            <i class="fa-solid fa-scroll"></i> Shawarmas & Rolls
+          </button>
+          <button class="category-pill-btn" data-category="pastas">
+            <i class="fa-solid fa-bowl-food"></i> Oven-Baked Pastas
+          </button>
+          <button class="category-pill-btn" data-category="wings">
+            <i class="fa-solid fa-drumstick-bite"></i> Crispy & BBQ Wings
+          </button>
+          <button class="category-pill-btn" data-category="beverages">
+            <i class="fa-solid fa-bottle-water"></i> Beverages & Sauces
+          </button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="menu-search-box">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="menuSearchInput" placeholder="Search pizza, pasta, shawarma, wings..." autocomplete="off">
+          <button class="clear-search-btn" id="clearSearchBtn" style="display: none;"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+
+      <!-- Menu Items Grid -->
+      <div class="menu-items-grid" id="menuItemsGrid">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- GOOGLE VERIFIED REVIEWS SECTION (Social Proof) -->
+  <section class="reviews-section" id="reviews-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge"><i class="fa-brands fa-google"></i> Authentic Customer Love</div>
+        <h2 class="section-title">What Twin Cities Foodies Say</h2>
+        <p class="section-desc">Over 4.8 / 5.0 Rating on Google. Here's why thousands of regulars order every week.</p>
+      </div>
+
+      <div class="reviews-stats-banner">
+        <div class="stat-score-box">
+          <div class="big-score">4.8</div>
+          <div class="stars-gold">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <div class="stat-meta">Based on 100+ Google Reviews</div>
+        </div>
+        <div class="stat-bars-box">
+          <div class="bar-row">
+            <span>5 Star</span>
+            <div class="progress-bar"><div class="progress-fill" style="width: 92%;"></div></div>
+            <span>92%</span>
+          </div>
+          <div class="bar-row">
+            <span>4 Star</span>
+            <div class="progress-bar"><div class="progress-fill" style="width: 7%;"></div></div>
+            <span>7%</span>
+          </div>
+          <div class="bar-row">
+            <span>3 Star</span>
+            <div class="progress-bar"><div class="progress-fill" style="width: 1%;"></div></div>
+            <span>1%</span>
+          </div>
+        </div>
+        <div class="write-review-cta">
+          <a href="https://www.google.com/search?q=Pizzay+Di+Hatti+Rawalpindi+Reviews" target="_blank" class="btn btn-outline" rel="noopener">
+            <i class="fa-brands fa-google"></i> View on Google Maps
+          </a>
+        </div>
+      </div>
+
+      <div class="reviews-cards-carousel" id="reviewsCarousel">
+        
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">K</div>
+            <div class="reviewer-info">
+              <h4>Kiran Kiran</h4>
+              <div class="reviewer-meta">
+                <span class="verified-tag"><i class="fa-solid fa-circle-check"></i> Google Verified</span>
+                <span>• 1 month ago</span>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+          </div>
+          <p class="review-comment">
+            "The food is always amazing! I always order from them. The pizzas are always fully loaded, piping hot and delicious 😋🍕"
+          </p>
+          <div class="review-highlight-pill">👑 Crown Crust & Loaded Pizzas</div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar" style="background: #e65100;">M</div>
+            <div class="reviewer-info">
+              <h4>Mohid Ahmad</h4>
+              <div class="reviewer-meta">
+                <span class="verified-tag"><i class="fa-solid fa-circle-check"></i> Takeaway Order</span>
+                <span>• 2 months ago</span>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+          </div>
+          <p class="review-comment">
+            "Delicious fast food items. Especially their special pizza and crown crust pizzas are so outstanding! Best taste in Shamsabad 🤤🖤"
+          </p>
+          <div class="review-highlight-pill">🍕 Special Crown Crust</div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar" style="background: #6a1b9a;">E</div>
+            <div class="reviewer-info">
+              <h4>Emaan Khan</h4>
+              <div class="reviewer-meta">
+                <span class="verified-tag"><i class="fa-solid fa-circle-check"></i> Google Verified</span>
+                <span>• 2 months ago</span>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+          </div>
+          <p class="review-comment">
+            "Cheesy pizza, crispy burger, spicy wings - full paisa wasool combo! Taste 10/10, service super fast. Will definitely order again!"
+          </p>
+          <div class="review-highlight-pill">🍗 Paisa Wasool Deals</div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar" style="background: #00838f;">R</div>
+            <div class="reviewer-info">
+              <h4>Rehman Khan</h4>
+              <div class="reviewer-meta">
+                <span class="verified-tag"><i class="fa-solid fa-circle-check"></i> Delivery Order</span>
+                <span>• 2 months ago</span>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+          </div>
+          <p class="review-comment">
+            "The chicken roll paratha is very delicious! It's fresh, flavorful, and perfectly cooked. The combination of tender chicken and soft and crispy paratha is top notch."
+          </p>
+          <div class="review-highlight-pill">🌯 Crispy Paratha Rolls</div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar" style="background: #2e7d32;">S</div>
+            <div class="reviewer-info">
+              <h4>Seher Malik</h4>
+              <div class="reviewer-meta">
+                <span class="verified-tag"><i class="fa-solid fa-circle-check"></i> Google Verified</span>
+                <span>• 2 months ago</span>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+          </div>
+          <p class="review-comment">
+            "Loved everything from Pizzay Di Hatti! Pizza, burger, fries sab kuch delicious tha. Hot, fresh, fast delivery, and great service. Whole menu is top notch recommended! 🫶"
+          </p>
+          <div class="review-highlight-pill">🚀 Fast & Hot Delivery</div>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar" style="background: #ad1457;">H</div>
+            <div class="reviewer-info">
+              <h4>Hassan Zaidi</h4>
+              <div class="reviewer-meta">
+                <span class="verified-tag"><i class="fa-solid fa-circle-check"></i> Delivery Order</span>
+                <span>• 4 weeks ago</span>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+          </div>
+          <p class="review-comment">
+            "Delicious in taste, affordable in price, freshly cooked chicken and cheese. 100% recommended for family dinner."
+          </p>
+          <div class="review-highlight-pill">💰 Budget Friendly</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANCHES & LOCATION SECTION -->
+  <section class="branches-section" id="branches-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge"><i class="fa-solid fa-map-pin"></i> Visit or Order</div>
+        <h2 class="section-title">Our Twin Cities Branches</h2>
+        <p class="section-desc">Serving fresh hot pizzas across Rawalpindi and Islamabad with rapid doorstep delivery.</p>
+      </div>
+
+      <div class="branches-grid">
+        <!-- Branch 1: Shamsabad -->
+        <div class="branch-card">
+          <div class="branch-card-header">
+            <div class="branch-badge main">Main Branch</div>
+            <h3>Rawalpindi Branch</h3>
+            <p class="branch-loc"><i class="fa-solid fa-location-dot"></i> Bilal Colony, Shamsabad, Rawalpindi, 46000</p>
+          </div>
+          <div class="branch-card-body">
+            <ul class="branch-details-list">
+              <li><i class="fa-solid fa-clock"></i> <strong>Hours:</strong> Daily 5:00 PM – 3:00 AM</li>
+              <li><i class="fa-solid fa-phone"></i> <strong>Contact:</strong> +92 310 5050481</li>
+              <li><i class="fa-solid fa-motorcycle"></i> <strong>Delivery Areas:</strong> Shamsabad, Satellite Town, Faizabad, Commercial Market, Sadiqabad, 6th Road</li>
+            </ul>
+            <div class="branch-card-actions">
+              <button class="btn btn-primary set-branch-btn" data-branch="shamsabad" data-phone="923105050481" data-address="Bilal Colony, Shamsabad, Rawalpindi">
+                <i class="fa-solid fa-circle-check"></i> Order from Rawalpindi
+              </button>
+              <a href="https://maps.google.com/?q=Bilal+Colony+Shamsabad+Rawalpindi" target="_blank" class="btn btn-outline" rel="noopener">
+                <i class="fa-solid fa-diamond-turn-right"></i> Directions
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Branch 2: Ghori Town -->
+        <div class="branch-card">
+          <div class="branch-card-header">
+            <div class="branch-badge isb">Islamabad Branch</div>
+            <h3>Islamabad Branch</h3>
+            <p class="branch-loc"><i class="fa-solid fa-location-dot"></i> Ghori Town Phase 5, Islamabad</p>
+          </div>
+          <div class="branch-card-body">
+            <ul class="branch-details-list">
+              <li><i class="fa-solid fa-clock"></i> <strong>Hours:</strong> Daily 5:00 PM – 3:00 AM</li>
+              <li><i class="fa-solid fa-phone"></i> <strong>Contact:</strong> +92 309 5229121</li>
+              <li><i class="fa-solid fa-motorcycle"></i> <strong>Delivery Areas:</strong> Ghori Town Phase 1-5, Khanna Pul, Airport Society, Gulberg Greens, Korang Town</li>
+            </ul>
+            <div class="branch-card-actions">
+              <button class="btn btn-primary set-branch-btn" data-branch="ghori_town" data-phone="923095229121" data-address="Ghori Town Phase 5, Islamabad">
+                <i class="fa-solid fa-circle-check"></i> Order from Islamabad
+              </button>
+              <a href="https://maps.google.com/?q=Ghori+Town+Phase+5+Islamabad" target="_blank" class="btn btn-outline" rel="noopener">
+                <i class="fa-solid fa-diamond-turn-right"></i> Directions
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE-OVER GLASSMORPHISM SHOPPING CART -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart">
+    
+    <!-- Fixed Cart Header -->
+    <div class="cart-header">
+      <div class="cart-title-box">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <h3>Your Order Cart</h3>
+        <span class="cart-items-count" id="cartHeaderCount">(0 items)</span>
+      </div>
+      <button class="cart-close-btn" id="closeCartBtn" aria-label="Close Cart">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Free Delivery Meter Progress -->
+    <div class="delivery-progress-box">
+      <div class="delivery-progress-labels">
+        <span id="deliveryProgressText"><i class="fa-solid fa-motorcycle"></i> Add Rs. 500 for <strong>FREE Delivery</strong></span>
+        <span class="delivery-badge-pill" id="deliveryBadgePill">Min Rs. 500</span>
+      </div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="deliveryProgressBar" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Active Branch Indicator in Cart -->
+    <div class="cart-branch-banner">
+      <i class="fa-solid fa-store"></i>
+      <div class="cart-branch-text">
+        <span>Order Dispatch Branch:</span>
+        <strong id="cartBranchNameDisplay">Rawalpindi (Shamsabad)</strong>
+      </div>
+      <button class="change-branch-link" id="cartChangeBranchBtn">Change</button>
+    </div>
+
+    <!-- Unified Smooth Scrollable Body -->
+    <div class="cart-scrollable-body">
+      
+      <!-- Cart Items List -->
+      <div class="cart-items-body" id="cartItemsContainer">
+        <!-- Empty state / Items populated by JavaScript -->
+      </div>
+
+      <!-- AUTO-UPSELL RECOMMENDATION TRAY (Smart Engine) -->
+      <div class="cart-upsell-section" id="cartUpsellSection">
+        <div class="upsell-heading">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <span>Make It A Feast! (Popular Add-ons)</span>
+        </div>
+        <div class="upsell-carousel" id="upsellCarousel">
+          <!-- Upsell items populated by JS -->
+        </div>
+      </div>
+
+      <!-- Checkout Customer Form in Flow -->
+      <div class="checkout-form-container" id="checkoutFormContainer">
+        <div class="form-title">
+          <i class="fa-solid fa-user-check"></i> Customer Delivery Details
+        </div>
+        
+        <div class="form-inputs-grid">
+          <div class="input-field-group">
+            <label for="custName"><i class="fa-solid fa-user"></i> Full Name *</label>
+            <input type="text" id="custName" placeholder="e.g. Usama Khan" required>
+          </div>
+
+          <div class="input-field-group">
+            <label for="custPhone"><i class="fa-solid fa-phone"></i> WhatsApp Phone Number *</label>
+            <input type="tel" id="custPhone" placeholder="e.g. 0310 1234567" required>
+          </div>
+
+          <div class="input-field-group">
+            <label for="custArea"><i class="fa-solid fa-location-crosshairs"></i> Delivery Area / Town *</label>
+            <select id="custArea">
+              <option value="Shamsabad">Shamsabad (Rawalpindi)</option>
+              <option value="Satellite Town">Satellite Town (Rawalpindi)</option>
+              <option value="Faizabad">Faizabad (Rawalpindi / ISB)</option>
+              <option value="Commercial Market">Commercial Market (Rawalpindi)</option>
+              <option value="6th Road / Murree Road">6th Road / Murree Road</option>
+              <option value="Sadiqabad">Sadiqabad (Rawalpindi)</option>
+              <option value="Ghori Town">Ghori Town (Islamabad)</option>
+              <option value="Khanna Pul">Khanna Pul (Islamabad)</option>
+              <option value="Airport Housing Society">Airport Housing Society</option>
+              <option value="Gulberg Greens">Gulberg Greens (Islamabad)</option>
+              <option value="Other Area">Other Area in Twin Cities</option>
+            </select>
+          </div>
+
+          <div class="input-field-group">
+            <label for="custAddress"><i class="fa-solid fa-house"></i> Street Address & House # *</label>
+            <input type="text" id="custAddress" placeholder="House / Flat #, Street #, Landmark" required>
+          </div>
+
+          <div class="input-field-group full-width">
+            <label for="custNotes"><i class="fa-solid fa-pen-to-square"></i> Special Instructions (Optional)</label>
+            <input type="text" id="custNotes" placeholder="Extra napkins, less spicy, call before arriving...">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Sticky Bottom Cart Footer -->
+    <div class="cart-sticky-footer">
+      
+      <!-- Cost Summary -->
+      <div class="cost-breakdown">
+        <div class="cost-row">
+          <span>Subtotal</span>
+          <strong id="cartSubtotalText">Rs. 0</strong>
+        </div>
+        <div class="cost-row">
+          <span>Delivery Fee</span>
+          <strong id="cartDeliveryFeeText" class="free-highlight">Rs. 0</strong>
+        </div>
+        <div class="cost-row total-row">
+          <span>Total Payable (COD)</span>
+          <strong id="cartGrandTotalText">Rs. 0</strong>
+        </div>
+      </div>
+
+      <!-- Submit via WhatsApp Button -->
+      <button class="btn btn-whatsapp-checkout" id="submitOrderBtn">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Send Order via WhatsApp</span>
+        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+      </button>
+
+      <div class="payment-guarantee-note">
+        <i class="fa-solid fa-shield-halved"></i> 100% Safe • Pay Cash on Delivery (COD) / JazzCash / EasyPaisa
+      </div>
+    </div>
+  </aside>
+
+  <!-- CUSTOMIZATION MODAL (Crust, Size, Add-ons) -->
+  <div class="modal-overlay" id="customizeModalOverlay">
+    <div class="customize-modal" id="customizeModal">
+      <button class="modal-close-btn" id="closeCustomizeModalBtn"><i class="fa-solid fa-xmark"></i></button>
+      
+      <div class="modal-product-header">
+        <img src="Images/crown-crust-pizza.jpg" alt="Selected Pizza" id="modalProductImg">
+        <div class="modal-product-titles">
+          <h3 id="modalProductName">Super Supreme Pizza</h3>
+          <p id="modalProductDesc">Loaded with special grilled chicken, olives, mushrooms and pure mozzarella.</p>
+          <div class="modal-price-badge" id="modalProductPrice">Rs. 630</div>
+        </div>
+      </div>
+
+      <div class="modal-options-body">
+        
+        <!-- Size Selector -->
+        <div class="option-group" id="modalSizeGroup">
+          <label class="option-group-title"><i class="fa-solid fa-arrows-left-right"></i> Select Size:</label>
+          <div class="size-buttons-grid">
+            <button class="size-btn" data-size="Small" data-price="220">
+              <span class="size-name">Small (7")</span>
+              <span class="size-price">Rs. 220</span>
+            </button>
+            <button class="size-btn active" data-size="Medium" data-price="440">
+              <span class="size-name">Medium (10")</span>
+              <span class="size-price">Rs. 440</span>
+            </button>
+            <button class="size-btn" data-size="Large" data-price="630">
+              <span class="size-name">Large (13")</span>
+              <span class="size-price">Rs. 630</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Crust Upgrade Selector -->
+        <div class="option-group" id="modalCrustGroup">
+          <label class="option-group-title"><i class="fa-solid fa-crown"></i> Choose Crust Upgrade (Optional):</label>
+          <div class="crust-options-list">
+            <label class="crust-radio-card active">
+              <input type="radio" name="crustOption" value="Regular Crust" data-extra="0" checked>
+              <div class="crust-card-info">
+                <strong>Standard Pan Crust</strong>
+                <small>Fresh golden crust</small>
+              </div>
+              <span class="extra-cost">+Rs. 0</span>
+            </label>
+
+            <label class="crust-radio-card">
+              <input type="radio" name="crustOption" value="Crown Crust" data-extra="200">
+              <div class="crust-card-info">
+                <strong>👑 Crown Crust (Chef's Special)</strong>
+                <small>Folded pockets stuffed with chicken & cheese</small>
+              </div>
+              <span class="extra-cost">+Rs. 200</span>
+            </label>
+
+            <label class="crust-radio-card">
+              <input type="radio" name="crustOption" value="Cheese Stuffer" data-extra="180">
+              <div class="crust-card-info">
+                <strong>🧀 Cheese Stuffer Crust</strong>
+                <small>Filled with molten mozzarella ring</small>
+              </div>
+              <span class="extra-cost">+Rs. 180</span>
+            </label>
+
+            <label class="crust-radio-card">
+              <input type="radio" name="crustOption" value="Kabab Stuffer" data-extra="220">
+              <div class="crust-card-info">
+                <strong>🍢 Kabab Stuffer Crust</strong>
+                <small>Juicy BBQ seekh kabab baked in rim</small>
+              </div>
+              <span class="extra-cost">+Rs. 220</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Extra Toppings Add-ons -->
+        <div class="option-group">
+          <label class="option-group-title"><i class="fa-solid fa-plus"></i> Extra Add-ons:</label>
+          <div class="addons-checkbox-grid">
+            <label class="addon-checkbox-card">
+              <input type="checkbox" id="extraCheeseCheck" value="Extra Cheese" data-price="80">
+              <div class="addon-info">
+                <span>🧀 Extra Cheese Layer</span>
+                <small>+Rs. 80</small>
+              </div>
+            </label>
+            <label class="addon-checkbox-card">
+              <input type="checkbox" id="extraChickenCheck" value="Extra Chicken" data-price="60">
+              <div class="addon-info">
+                <span>🍗 Extra Chicken Chunks</span>
+                <small>+Rs. 60</small>
+              </div>
+            </label>
+            <label class="addon-checkbox-card">
+              <input type="checkbox" id="extraDipCheck" value="Dip Sauce" data-price="30">
+              <div class="addon-info">
+                <span>🥫 Special Dip Sauce</span>
+                <small>+Rs. 30</small>
+              </div>
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="modal-footer">
+        <div class="modal-total-calc">
+          <span>Total Item Price:</span>
+          <strong id="modalCalculatedTotal">Rs. 440</strong>
+        </div>
+        <button class="btn btn-primary" id="confirmAddToCartBtn">
+          <i class="fa-solid fa-cart-plus"></i> Add To Order
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ORDER SUCCESS TOAST / MODAL -->
+  <div class="toast-notification" id="toastNotification">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMessage">Item added to your order!</span>
+  </div>
+
+  <!-- ADMIN / OWNER CUSTOMER DATA EXPORT MODAL (For SMS Marketing Deals) -->
+  <div class="modal-overlay" id="adminModalOverlay">
+    <div class="admin-modal">
+      <button class="modal-close-btn" id="closeAdminModalBtn"><i class="fa-solid fa-xmark"></i></button>
+      <div class="admin-modal-header">
+        <i class="fa-solid fa-database"></i>
+        <div>
+          <h3>Restaurant Owner Customer Data</h3>
+          <small>Recorded phone numbers & order details for SMS Marketing Campaigns</small>
+        </div>
+      </div>
+      <div class="admin-modal-body">
+        <div class="admin-stats-row">
+          <div class="admin-stat-card">
+            <span class="label">Total Orders Recorded</span>
+            <strong id="adminTotalOrdersCount">0</strong>
+          </div>
+          <div class="admin-stat-card">
+            <span class="label">Unique Customer Numbers</span>
+            <strong id="adminUniqueCustomersCount">0</strong>
+          </div>
+        </div>
+
+        <div class="admin-table-wrapper">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Date & Time</th>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Area / Branch</th>
+                <th>Bill Amount</th>
+              </tr>
+            </thead>
+            <tbody id="adminOrdersTableBody">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="admin-modal-footer">
+        <button class="btn btn-outline" id="exportCsvBtn">
+          <i class="fa-solid fa-file-csv"></i> Download CSV / Excel
+        </button>
+        <button class="btn btn-primary" id="copyNumbersBtn">
+          <i class="fa-solid fa-copy"></i> Copy All Phone Numbers
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <div class="footer-col brand-col">
+        <div class="footer-logo">
+          <img src="Images/Logo.jpeg" alt="Pizzay Di Hatti Logo">
+          <div class="footer-title">
+            <span class="title">Pizzay Di Hatti</span>
+            <span class="slogan">سواد محبت دا</span>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Crafting the twin cities' juiciest Crown Crust pizzas, flaky chicken paratha rolls, and crispy wings with love and authentic taste since inception.
+        </p>
+        <div class="footer-social-links">
+          <a href="https://www.facebook.com/pizzay.di.hatti.islamabad/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://wa.me/923105050481" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.foodpakistan.pk/restaurant/pizzay-di-hatti" target="_blank" rel="noopener" aria-label="Food Pakistan"><i class="fa-solid fa-utensils"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#menu-section"><i class="fa-solid fa-chevron-right"></i> Full Menu</a></li>
+          <li><a href="#deals-section"><i class="fa-solid fa-chevron-right"></i> Mega Deals 1 to 6</a></li>
+          <li><a href="#reviews-section"><i class="fa-solid fa-chevron-right"></i> Google Reviews (4.8★)</a></li>
+          <li><a href="#branches-section"><i class="fa-solid fa-chevron-right"></i> Shamsabad & Ghori Town</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Opening Hours</h4>
+        <ul class="footer-timings">
+          <li><span>Monday – Sunday:</span> <strong>5:00 PM – 3:00 AM</strong></li>
+          <li><span>Delivery Timing:</span> <strong>5:00 PM – 3:00 AM</strong></li>
+          <li><span>Rush Hours:</span> <strong>8:00 PM – 12:00 AM</strong></li>
+          <li class="status-note"><i class="fa-solid fa-moon"></i> Midnight delivery throughout Rawalpindi & Islamabad</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Direct Contact</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-phone"></i> +92 310 5050481 (Main)</li>
+          <li><i class="fa-solid fa-phone"></i> 0309-5229121 (Islamabad)</li>
+          <li><i class="fa-solid fa-location-dot"></i> Bilal Colony, Shamsabad, Rawalpindi</li>
+          <li><i class="fa-solid fa-location-dot"></i> Ghori Town Phase 5, Islamabad</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div class="container bottom-content">
+        <p>© 2026 Pizzay Di Hatti. All Rights Reserved. Crafted with <i class="fa-solid fa-heart" style="color: #ff3838;"></i> for Twin Cities Food Lovers.</p>
+        
+        <!-- Secret Owner Portal Trigger -->
+        <button class="owner-portal-btn" id="openAdminModalBtn" title="Restaurant Owner Portal">
+          <i class="fa-solid fa-lock"></i> Owner SMS Portal
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING QUICK WHATSAPP BUTTON -->
+  <a href="https://wa.me/923105050481?text=Assalam-o-Alaikum%20Pizzay%20Di%20Hatti!%20I%20want%20to%20order." class="floating-whatsapp-pill" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-hover-text">Chat on WhatsApp</span>
+  </a>
+
+  <!-- Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
